@@ -7,6 +7,7 @@ class App extends Component {
         this.state = {
             data: [],
             index: 0,
+            selectedOption: []
         };
     }
 
@@ -19,17 +20,27 @@ class App extends Component {
         })
     }
 
-    handleClick = () => {
-        this.setState({index: this.state.index+1})
-        
-        axios.put('/api/royals/quiz')
+    handleOptionChange = (e) => {
+        this.setState ({selectedOption: e.target.value});
+    }
+    
+
+
+    handleClick = (e) => {
+        let body = {
+            selectedAnswer: this.state.selectedOption
+        }
+        axios.put('/api/royals/quiz', body)
         .then((response) => {
-            this.setState({ data: response.data})
+            // this.setState({ data: response.data})
         })
+
+        this.setState({index: this.state.index+1})
         
     }
 
     render(){
+        const index = this.state.index
         const {data} = this.state.data
         console.log(this.state.data)
         if (!data)
@@ -39,11 +50,20 @@ class App extends Component {
             <div>
                 <h1>Question</h1>
                 <div className = "Questions-display">
-                    <h1 className="question">{data[0].question}</h1>
-                    <p><input type="radio" name= "answer" /> {data[0].choices[0]} </p>
-                    <p><input type="radio" name= "answer" /> {data[0].choices[1]} </p>
-                    <p><input type="radio" name= "answer" /> {data[0].choices[2]} </p>
-                    <p><input type="radio" name= "answer" /> {data[0].choices[3]} </p>                 
+                    <h1 className="question">{data[index].question}</h1>
+
+                    <p><input type="radio" name= "answer" value = {data[index].choices[0]}
+                    checked={this.state.selectedOption}
+                    onChange={this.handleOptionChange}/> {data[index].choices[0]} </p>
+                    <p><input type="radio" name= "answer"  value = {data[index].choices[1]}
+                    checked={this.state.selectedOption}
+                    onChange={this.handleOptionChange}/> {data[index].choices[1]} </p>
+                    <p><input type="radio" name= "answer" value = {data[index].choices[2]}
+                    checked={this.state.selectedOption}
+                    onChange={this.handleOptionChange}/> {data[index].choices[2]} </p>
+                    <p><input type="radio" name= "answer" 
+                    checked={this.state.selectedOption}value = {data[index].choices[3]}
+                    onChange={this.handleOptionChange}/> {data[index].choices[3]} </p>                 
                 </div>
                 <button className="submit-question" onClick= {this.handleClick} >Submit</button>
 

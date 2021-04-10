@@ -20,11 +20,11 @@ class Start extends Component {
     }
 
     handleClick = () => {
-        const name = this.state;
+        const {name} = this.state
 
         axios.post('/api/royals/quiz', {name})
         .then ((response) => {
-            this.name(response.data)
+            this.setState({name: response.data})
         })
         .catch()
     }

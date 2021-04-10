@@ -13,7 +13,8 @@ module.exports = {
         res.status(200).send(name)
     },
     storeAnswers: (req,res) => {
-        answer = req.body
+        console.log("answer is stored")
+        let {selectedAnswer} = req.body
         answer.push(selectedAnswer)
 
         res.status(200).send(answer); 
