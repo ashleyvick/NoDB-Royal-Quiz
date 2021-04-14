@@ -21,12 +21,12 @@ class Start extends Component {
 
     handleClick = () => {
         const {name} = this.state
+        console.log(this.state, name)
 
         axios.post('/api/royals/quiz', {name})
         .then ((response) => {
             this.setState({name: response.data})
         })
-        .catch()
     }
 
     
@@ -35,10 +35,13 @@ class Start extends Component {
     render(){
         return(
             <div>
-                <div className = "display-box">
-                <h1>What Duchess from the Royal Family Are You? </h1>
-                <input className="nameInput" placeholder="Your Name" onChange={this.handleInput}></input>
+                <div className = "title-box">
+                <h1>Which Duchess From The Royal Family Are You? 
+                <br></br>
+                <input className="nameInput" placeholder="Your Name" name = "name" onChange={this.handleInput}></input>
+
                 <button className = "nameButton" onClick ={this.handleClick} >Click</button>
+                </h1>
                 </div>
             </div>
         )

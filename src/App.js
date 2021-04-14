@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
+import './App.css'
 // import axios from 'axios';
 import Start from './Components/Start';
 import Questions from './Components/Questions';
-// import Results from './Components/Results';
-// import DisplayResults from './Components/DisplayResults'
+import DisplayResults from './Components/DisplayResults'
 
 class App extends Component {
   constructor(){
@@ -21,10 +21,16 @@ class App extends Component {
 
   render(){
     return (
-      <div>
-        <h1>Royal Quiz</h1>
-        <Start />
-        <Questions/>
+      <div className= "App-header">
+        <h1 className= "royal-quiz">Royal Quiz</h1>
+        <div className = "Components">
+          <Start />
+          <Questions/>
+          <DisplayResults/>
+        </div>
+        <h1 className = "dedication">Dedicated to the memory of His Royal Highness, Prince Philip, Duke of Edinburgh
+          <br></br>
+          June 10, 1921 - April 09, 2021</h1>
 
       </div>
     )

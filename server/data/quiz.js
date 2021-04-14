@@ -63,6 +63,7 @@ data:[
         {
             id: 7,
             question: "Pick a Crown",
+            isImage: true,
             choices: [
                 "http://questbusinesssystems.com/5/queen-elizabeth-coronation-crown-value-24.jpg",
                 "https://res.cloudinary.com/dcaptnlz3/image/upload/c_crop,h_2567,w_1711,x_482,y_0/c_fill,h_600,q_auto,w_400/iQbZnCX249BfN2Rx12uU3WWn.jpg",
@@ -83,6 +84,7 @@ data:[
         {
             id: 9,
             question: "Pick your Royal Pet" ,
+            isImage: true,
             choices: [
                 "https://www.newshub.co.nz/home/world/2018/04/queen-elizabeth-ii-s-last-remaining-corgi-dies/_jcr_content/par/image.dynimg.1280.q75.jpg/v1524074910309/queen_elizabeth_queens_corgis_dogs-GETTY-120.jpg",
                 "https://lh3.googleusercontent.com/proxy/305gXgaHtjl5_chrsdIg1Q0g_MEkQPjNWqH6Ot8xQYtPrUX5YbA9ukdY51JtyM9XICcwFL_af6CENT0epLJCI0-rWzkX7dUw2z4nNruvgnu_oV9MDidh=s0-d",
@@ -103,6 +105,7 @@ data:[
         {
         id: 11,
             question: "Choose your Royal Footwear" ,
+            isImage: true,
             choices: [
                 "https://cdn.images.dailystar.co.uk/dynamic/1/photos/897000/Queen-Elizabeth-II-Buckingham-Palace-Royal-Family-Shoes-Assistant-Secret-Wardrobe-Charles-900897.jpg",
                 "https://www.hellomagazine.com/imagenes/fashion/royal-style/2019062674654/camilla-parker-bowles-outfit-details-check-skirt-sole-bliss-shoes-aberdeen/0-363-157/sole-bliss-shoes-z.jpg",

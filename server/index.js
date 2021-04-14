@@ -10,7 +10,7 @@ const {
 const port = 5041
 app.use(express.json());
 
-app.get('/api/royals/quiz', getQuiz);
+app.get('/api/royals/quiz', getQuiz, results);
 app.post('/api/royals/quiz', addName);
 app.put('/api/royals/quiz', storeAnswers);
 

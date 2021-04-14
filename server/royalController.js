@@ -9,14 +9,19 @@ module.exports = {
     },
     addName: (req,res) => {
         name = req.body.name
-        console.log('Name has been stored')
+        console.log("name has been saved", req.body)
         res.status(200).send(name)
     },
     storeAnswers: (req,res) => {
-        console.log("answer is stored")
+        console.log(answer)
         let {selectedAnswer} = req.body
         answer.push(selectedAnswer)
-
         res.status(200).send(answer); 
+    },
+    results: (req, res) => {
+        let {winner} = req.body
+        answer.push(winner)
+        res.status(200).send(answer)
+
     }
 }
