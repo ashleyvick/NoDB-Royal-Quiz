@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Niconne', cursive;;
+  font-family: "Niconne", cursive;
   src: url();
 }
 @font-face {
-  font-family:'Bree Serif', serif;
+  font-family: "Bree Serif", serif;
   src: url();
 }
 
@@ -16,83 +16,106 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
 }
 
 body {
   background-image: url(https://thumbs.gfycat.com/ElderlyImpressiveIvorybilledwoodpecker-size_restricted.gif);
 }
 
-.App-header{
+.App-header {
   box-sizing: border-box;
   height: 300px;
   width: 100%;
-  margin-top: 15%;
+  margin-top: 20%;
   text-align: center;
   font-size: 75px;
-  font-family: 'Niconne', cursive;
+  font-family: "Niconne", cursive;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 }
 
-.royal-quiz{
-  background-color: rgb(165, 36, 36);
+.royal-quiz {
+  background-color: #b10303;
   margin: 2%;
 }
 
-.title-box h1{
+.title-box h1 {
   height: 150px;
   width: 750px;
-  background-color: rgb(16, 16, 51);
+  background-color: rgba(16, 16, 51);
   padding-top: 5%;
   color: white;
   text-align: center;
   font-size: 50px;
-  font-family: 'Niconne', cursive;
+  font-family: "Niconne", cursive;
   position: relative;
-  
 }
 
 .Questions-display {
-    text-align: left;
-    height: 200px;
-    width: 700px;
-    margin: 5%;
-    padding: 5% ;
-    font-family: 'Bree Serif', serif;
-    font-size: 16px;
-    background-color: white;
-    color: black;
-    }
+  text-align: left;
+  height: 200px;
+  width: 700px;
+  margin: 5%;
+  padding: 5%;
+  font-family: "Bree Serif", serif;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
 
-    .dedication {
-      background-color: rgb(16, 16, 51);
-      font-size: 30px;
-    }
+.dedication {
+  background-color: rgba(16, 16, 51);
+  font-size: 30px;
+  border: rgb(233, 14, 14) solid 2px;
+  padding: 2%;
+}
 
-    .photos-div{
-      height: 600px;
-      width: 600px;
-      margin: 5%;
-      padding: 5% ;
-      background-color: white;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center; 
-      
-    }
+.photos-div {
+  height: 600px;
+  width: 600px;
+  margin: 5%;
+  padding: 5%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.picture-questions {
+  width: 100%;
+  font-family: "Bree Serif", serif;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
 
-    .photos {
-      width: 250px;
-      height: 195px;
-    }
+.photos {
+  width: 250px;
+  height: 195px;
+}
 
-    .photo-queen{
-      width: 270px;
-      height: 190px;
-    }
+.photo-queen {
+  width: 270px;
+  height: 190px;
+}
+
+.nameButton {
+  font-family: "Niconne", cursive;
+}
+
+.nameButton:hover {
+  background-color: rgb(233, 186, 69);
+  font-family: "Niconne", cursive;
+  font-size: 20px;
+}
+
+.submit-question:hover {
+  background-color: rgb(233, 186, 69);
+  font-family: "Niconne", cursive;
+  font-size: 25px;
+}

@@ -1,36 +1,34 @@
 import axios from "axios";
 import React from "react";
 
-const Results = ({}) => {
+const Results = () => {
+  const handleClick = (e) => {
+    axios.get("/api/royals/quiz").then((response) => {
+      this({ winner: response.data });
+    });
+  };
 
-    handleClick = (e) => {
-
-        axios.get('/api/royals/quiz', results)
-        .then((response) => {
-        });
+  const getResults = () => {
+    {
+      this.answer.map(() => {
+        return;
+      });
     }
+  };
 
+  const retakeQuiz = () => {
+    axios.delete("/api/royals/quiz").then((response) => {});
+  };
 
-    retakeQuiz = (e) => {
-        axios.delete('/api/royals/quiz')
-        .then((response) => {
+  return (
+    <div>
+      {/* <section>
+            <button onClick={handleClick, getResults}>Get Results</button>
+            </section>
 
-        });
-    }
-
-
-
-
-
-    return (
-        <div>
-            <button onClick={handleClick}>Get Results</button>
-
-        <button onClick={retakeQuiz}>Try Again</button>
-
-
-        </div>
-    )
-}
+            <button onClick={retakeQuiz}>Try Again</button> */}
+    </div>
+  );
+};
 
 export default Results;

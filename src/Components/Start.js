@@ -35,14 +35,14 @@ class Start extends Component {
     render(){
         return(
             <div>
-                <div className = "title-box">
+                <section className = "title-box">
                 <h1>Which Duchess From The Royal Family Are You? 
                 <br></br>
                 <input className="nameInput" placeholder="Your Name" name = "name" onChange={this.handleInput}></input>
 
                 <button className = "nameButton" onClick ={this.handleClick} >Click</button>
                 </h1>
-                </div>
+                </section>
             </div>
         )
     }

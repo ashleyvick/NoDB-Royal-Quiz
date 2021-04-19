@@ -1,19 +1,21 @@
-const express = require ('express');
-const app = express()
+const express = require("express");
+const app = express();
 
 const {
-    getQuiz,
-    addName,
-    storeAnswers
-} = require('./royalController')
+  getQuiz,
+  addName,
+  storeAnswers,
+  results,
+  retake,
+} = require("./royalController");
 
-const port = 5041
+const port = 5041;
 app.use(express.json());
 
-app.get('/api/royals/quiz', getQuiz, results);
-app.post('/api/royals/quiz', addName);
-app.put('/api/royals/quiz', storeAnswers);
+app.get("/api/royals/quiz", getQuiz);
+app.get("/api/royals/results", results);
+app.post("/api/royals/quiz", addName);
+app.put("/api/royals/quiz", storeAnswers);
+app.delete("/api/royals/quiz/:id", retake);
 
-
-
-app.listen(port, () => console.log(`Server is running wild on port: ${port}`))
+app.listen(port, () => console.log(`Server is running wild on port: ${port}`));

@@ -9,8 +9,6 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      // quiz: quiz,
-      // index: 1
     };
   }
 
@@ -22,15 +20,14 @@ class App extends Component {
   render(){
     return (
       <div className= "App-header">
-        <h1 className= "royal-quiz">Royal Quiz</h1>
+        <header className= "royal-quiz">Royal Quiz</header>
         <div className = "Components">
           <Start />
           <Questions/>
-          <DisplayResults/>
         </div>
-        <h1 className = "dedication">Dedicated to the memory of His Royal Highness, Prince Philip, Duke of Edinburgh
+        <footer className = "dedication">Dedicated to the memory of His Royal Highness, Prince Philip, Duke of Edinburgh
           <br></br>
-          June 10, 1921 - April 09, 2021</h1>
+          June 10, 1921 - April 09, 2021</footer>
 
       </div>
     )
