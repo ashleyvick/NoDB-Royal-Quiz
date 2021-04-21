@@ -119,3 +119,32 @@ body {
   font-family: "Niconne", cursive;
   font-size: 25px;
 }
+
+.getResults {
+  background-color: rgba(16, 16, 51);
+  font-family: "Niconne", cursive;
+  color: white;
+  font-size: 75px;
+  margin: 3%;
+}
+
+.results {
+  background-image: url(https://www.commentnation.com/backgrounds/images/red_glitter_background_seamless_starry_night.gif);
+  height: 600px;
+  width: 800px;
+}
+
+.results h1 {
+  font-family: "Niconne", cursive;
+  color: white;
+  font-size: 50px;
+  position: relative;
+  padding: 10%;
+}
+
+.retake {
+  background-color: rgba(0, 0, 0, 0.575);
+  font-family: "Niconne", cursive;
+  font-size: 20px;
+  color: white;
+}

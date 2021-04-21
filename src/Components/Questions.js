@@ -1,5 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
+import Results from "./DisplayResults";
+import DisplayResults from "./DisplayResults";
+import Result from "./Result";
 
 class App extends Component {
   constructor() {
@@ -8,6 +11,7 @@ class App extends Component {
       data: [],
       index: 0,
       selectedOption: [],
+      results: "",
     };
   }
 
@@ -31,6 +35,18 @@ class App extends Component {
     this.setState({ index: this.state.index + 1 });
   };
 
+  handleClick2 = () => {
+    console.log("hit handleclick2");
+    axios.get("/api/royals/results").then((response) => {
+      this.setState({ results: response.data });
+    });
+  };
+
+  reset = () => {
+    axios.delete("/api/royals/quiz/:id").then((response) => {});
+    this.setState({ index: 0 });
+  };
+
   render() {
     const index = this.state.index;
     const { data } = this.state.data;
@@ -38,9 +54,15 @@ class App extends Component {
     console.log(this.state.data);
     if (!data) return null;
 
-    // if (index >= 11) {
-    //   return <DisplayResults />;
-    // }
+    if (index >= 11) {
+      return (
+        <DisplayResults
+          handleClick={this.handleClick2}
+          results={this.state.results}
+          reset={this.reset}
+        />
+      );
+    }
 
     if (data[index].isImage === true) {
       return (

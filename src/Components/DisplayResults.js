@@ -1,32 +1,26 @@
 import axios from "axios";
 import React from "react";
+import Questions from "./Questions";
 
-const Results = () => {
-  const handleClick = (e) => {
-    axios.get("/api/royals/quiz").then((response) => {
-      this({ winner: response.data });
-    });
-  };
-
-  const getResults = () => {
-    {
-      this.answer.map(() => {
-        return;
-      });
-    }
-  };
-
-  const retakeQuiz = () => {
-    axios.delete("/api/royals/quiz").then((response) => {});
-  };
+const Results = (props) => {
+  console.log(props);
 
   return (
     <div>
-      {/* <section>
-            <button onClick={handleClick, getResults}>Get Results</button>
-            </section>
+      <section>
+        <button className="getResults" onClick={props.handleClick}>
+          Get Results
+        </button>
+        {props.results ? ( //this is saying do not DISPLAY the result div until it's called.
+          <div className="results">
+            <h1>{props.results}</h1>
+          </div>
+        ) : null}
+      </section>
 
-            <button onClick={retakeQuiz}>Try Again</button> */}
+      <button className="retake" onClick={props.reset}>
+        Try Again
+      </button>
     </div>
   );
 };
